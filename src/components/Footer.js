@@ -88,8 +88,6 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">
             <span>&copy; {new Date().getFullYear()} {userData.name}</span>
-            <span className="w-1.5 h-1.5 bg-primary-600 rounded-full"></span>
-            <span>MCA Portfolio</span>
           </div>
 
           <button

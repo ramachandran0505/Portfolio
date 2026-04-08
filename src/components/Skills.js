@@ -16,7 +16,7 @@ const Skills = () => {
     <section id="skills" className="bg-white dark:bg-gray-950 py-16 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h3 className="text-[10px] font-black uppercase tracking-widest text-primary-600 mb-2 px-3 py-1 bg-primary-100 dark:bg-primary-900/30 inline-block rounded-full"> Expertise</h3>
+          <h3 className="text-[10px] font-black uppercase tracking-widest text-primary-600 mb-2 px-3 py-1 bg-primary-100 dark:bg-primary-900/30 inline-block rounded-full">Expertise</h3>
           <h2 className="text-3xl font-black tracking-tight">Technical Skills</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

@@ -4,6 +4,10 @@
 
 @layer base {
   /* Hide scrollbar for all browsers */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   html, body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */

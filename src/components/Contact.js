@@ -1,16 +1,44 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { Mail, Phone, MapPin, Send, MessageSquare, CheckCircle, XCircle } from 'lucide-react';
 import { userData } from '../data';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [message, setMessage] = React.useState('');
+  const form = useRef();
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState(null); // 'success', 'error', or null
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    const mailtoLink = `mailto:${userData.contact.email}?subject=Portfolio Message from ${name}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom: ${name} (${email})`;
-    window.location.href = mailtoLink;
+    setIsSending(true);
+    setStatus(null);
+
+    // Replace these placeholders with your EmailJS credentials
+    // You can get them by signing up at https://www.emailjs.com/
+    const SERVICE_ID = 'Rama9944'; // You will need to replace this
+    const TEMPLATE_ID = 'template_zug4s7t'; // You will need to replace this
+    const PUBLIC_KEY = 'CABMAH1m01zWG7d7j'; // You will need to replace this
+
+    emailjs.sendForm(
+      SERVICE_ID,
+      TEMPLATE_ID,
+      form.current,
+      PUBLIC_KEY
+    )
+      .then((result) => {
+        console.log(result.text);
+        setStatus('success');
+        setIsSending(false);
+        form.current.reset();
+        // Clear success message after 5 seconds
+        setTimeout(() => setStatus(null), 5000);
+      }, (error) => {
+        console.log(error.text);
+        setStatus('error');
+        setIsSending(false);
+        // Clear error message after 5 seconds
+        setTimeout(() => setStatus(null), 5000);
+      });
   };
 
   return (
@@ -64,38 +92,54 @@ const Contact = () => {
 
           {/* Form Column - Compact */}
           <div className="lg:col-span-2">
-            <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-900 p-8 rounded-[2rem] border border-gray-100 dark:border-gray-800 shadow-sm space-y-4">
+            <form ref={form} onSubmit={sendEmail} className="bg-white dark:bg-gray-900 p-8 rounded-[2rem] border border-gray-100 dark:border-gray-800 shadow-sm space-y-4">
+              <div className="mb-2">
+                <h3 className="text-xl font-black text-gray-900 dark:text-white">Send me a message</h3>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="name"
                   placeholder="Full Name"
                   required
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
                   className="w-full bg-gray-50/50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 p-4 rounded-xl focus:ring-2 focus:ring-primary-500 text-sm font-bold transition-all placeholder:text-gray-400"
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email Address"
                   required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-gray-50/50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 p-4 rounded-xl focus:ring-2 focus:ring-primary-500 text-sm font-bold transition-all placeholder:text-gray-400"
                 />
               </div>
               <textarea
+                name="message"
                 placeholder="Message..."
                 required
                 rows="4"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
                 className="w-full bg-gray-50/50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700 p-4 rounded-xl focus:ring-2 focus:ring-primary-500 text-sm font-bold transition-all placeholder:text-gray-400 resize-none"
               ></textarea>
+
+              {status === 'success' && (
+                <div className="flex items-center gap-2 text-green-600 bg-green-50 dark:bg-green-900/20 p-3 rounded-lg border border-green-100 dark:border-green-800 animate-in fade-in slide-in-from-top-2">
+                  <CheckCircle size={18} />
+                  <span className="text-xs font-bold">Message sent correctly! I'll get back to you soon.</span>
+                </div>
+              )}
+
+              {status === 'error' && (
+                <div className="flex items-center gap-2 text-red-600 bg-red-50 dark:bg-red-900/20 p-3 rounded-lg border border-red-100 dark:border-red-800 animate-in fade-in slide-in-from-top-2">
+                  <XCircle size={18} />
+                  <span className="text-xs font-bold">Oops! Something went wrong. Please try again.</span>
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-primary-600 hover:bg-primary-700 text-white font-black py-4 rounded-xl shadow-lg shadow-primary-500/20 transition-all flex items-center justify-center gap-3 uppercase tracking-widest hover:scale-[1.01] active:scale-[0.99]"
+                disabled={isSending}
+                className={`w-full ${isSending ? 'bg-gray-400 cursor-not-allowed' : 'bg-primary-600 hover:bg-primary-700'} text-white font-black py-4 rounded-xl shadow-lg shadow-primary-500/20 transition-all flex items-center justify-center gap-3 uppercase tracking-widest hover:scale-[1.01] active:scale-[0.99]`}
               >
-                Send Message <Send size={18} />
+                {isSending ? 'Sending...' : 'Send Message'} <Send size={18} className={isSending ? 'animate-pulse' : ''} />
               </button>
             </form>
           </div>

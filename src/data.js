@@ -20,7 +20,7 @@ export const userData = {
       github: "https://github.com/ramachandran0505/skmcart"
     },
     {
-      title: "Ticket Management S ystem (TMS)",
+      title: "Ticket Management System (TMS)",
       description: "A responsive Ticket Management System built using React, Node.js, and MongoDB. This application allows users to create, track, and manage support tickets efficiently.",
       techStack: ["React", "Node.js", "MongoDB"],
       image: "/tms.jpg",
