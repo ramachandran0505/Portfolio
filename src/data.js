@@ -60,7 +60,7 @@ export const userData = {
       github: "https://github.com/ramachandran0505/Calculator"
     }
   ],
-  resumeLink: "/RAM-RESUME.pdf",
+  resumeLink: "/RAM-RESUME-FINAL.pdf",
   contact: {
     email: "ramachandranboominathan@gmail.com",
     phone: "+91 63811 22084",
