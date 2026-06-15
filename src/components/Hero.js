@@ -31,9 +31,6 @@ const Hero = () => (
         <a href="#projects" className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all shadow-lg shadow-primary-600/20 flex items-center gap-2">
           View My Work <ArrowRight size={14} />
         </a>
-        <a href="#contact" className="border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 px-6 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all">
-          Get in Touch
-        </a>
       </div>
 
       {/* Subtle Scroll Indicator */}
