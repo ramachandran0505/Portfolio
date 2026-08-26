@@ -3,11 +3,27 @@ export const userData = {
   profileImage: "/RAMACHANDRAN.jpg",
   title: "MCA Fresher | Full-Stack Developer",
   shortIntro: "An enthusiastic MCA fresher with a passion for building user-friendly and efficient web applications. Skilled in React, Node.js, and modern CSS frameworks like Tailwind.",
-  aboutMe: "Hi, I'm Ramachandran, a passionate Frontend Developer. I build responsive websites and scalable applications focused on performance and user experience..",
+  aboutMe: "Hi, I'm Ramachandran, a passionate Full-Stack & MERN Developer. I build responsive websites and scalable applications focused on performance and user experience.",
+  education: [
+    {
+      degree: "Master of Computer Application (MCA)",
+      institution: "RVS College of Arts and Science, Coimbatore",
+      grade: "83.75% (1st year)",
+      status: "Pursuing",
+      period: "Pursuing"
+    },
+    {
+      degree: "Bachelor of Computer Application (BCA)",
+      institution: "Sengunthar Arts and Science College, Tiruchengode",
+      grade: "68%",
+      status: "Completed (2025)",
+      period: "2025"
+    }
+  ],
   skills: [
     { name: "Frontend", items: ["React", "HTML5", "CSS3", "JavaScript (ES6+)"] },
     { name: "Backend", items: ["Node.js", "Express", "MongoDB"] },
-    { name: "Tools", items: ["Git", "GitHub", "VS Code", "Postman", "NPM"] },
+    { name: "Tools", items: ["Git", "GitHub", "VS Code", "Postman", "AWS", "NPM"] },
     { name: "Soft Skills", items: ["Problem Solving", "Teamwork", "Communication", "Fast Learner"] }
   ],
   projects: [
