@@ -1,6 +1,6 @@
 export const userData = {
   name: "RAMACHANDRAN",
-  profileImage: "/RAMACHANDRAN.jpg",
+  profileImage: "/IMG_20260826_144503.png",
   title: "MCA Fresher | Full-Stack Developer",
   shortIntro: "An enthusiastic MCA fresher with a passion for building user-friendly and efficient web applications. Skilled in React, Node.js, and modern CSS frameworks like Tailwind.",
   aboutMe: "Hi, I'm Ramachandran, a passionate Full-Stack & MERN Developer. I build responsive websites and scalable applications focused on performance and user experience.",
