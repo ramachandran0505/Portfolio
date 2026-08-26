@@ -3,7 +3,7 @@ import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import { userData } from '../data';
 
 const Projects = () => (
-  <section id="projects" className="py-12 px-6 max-w-6xl mx-auto overflow-hidden bg-white dark:bg-gray-950">
+  <section id="projects" className="py-12 px-6 md:px-10 lg:px-12 w-full max-w-[1440px] mx-auto overflow-hidden bg-white dark:bg-gray-950">
     <div className="flex justify-between items-center mb-6 pb-2">
       <div>
         <h2 className="text-lg font-black tracking-widest uppercase text-gray-900 dark:text-white flex items-center gap-3">
@@ -15,7 +15,7 @@ const Projects = () => (
       </a>
     </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5">
       {userData.projects.map((project, idx) => (
         <article key={idx} className="group/item flex flex-col bg-white dark:bg-gray-900/40 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-50 dark:border-gray-800 relative">
           

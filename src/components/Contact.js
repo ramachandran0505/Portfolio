@@ -42,21 +42,21 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-16 px-6 bg-white dark:bg-gray-950 overflow-hidden">
+    <section id="contact" className="relative py-12 px-6 md:px-10 lg:px-12 bg-white dark:bg-gray-950 overflow-hidden">
       {/* Background Ornaments - Compact versions */}
       <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary-500/5 rounded-full blur-[100px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
 
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-300 rounded-full mb-4 border border-primary-100 dark:border-primary-800">
+      <div className="w-full max-w-[1440px] mx-auto">
+        <div className="text-center mb-8">
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-300 rounded-full mb-3 border border-primary-100 dark:border-primary-800">
             <MessageSquare size={14} />
             <span className="text-[10px] font-black uppercase tracking-widest">Contact</span>
           </div>
-          <h2 className="text-4xl font-black mb-4 tracking-tight">Let's <span className="text-primary-600 italic">Chat.</span></h2>
+          <h2 className="text-3xl lg:text-4xl font-black mb-3 tracking-tight">Let's <span className="text-primary-600 italic">Chat.</span></h2>
           <p className="text-gray-500 dark:text-gray-400 font-medium max-w-lg mx-auto text-sm">Have a project or just want to say hi? My inbox is always open.</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Info Column */}
           <div className="lg:col-span-1 space-y-4">
             <div className="p-5 bg-gray-50/50 dark:bg-gray-900/50 rounded-2xl border border-gray-100 dark:border-gray-800 flex items-center gap-4 group hover:border-primary-500/30 transition-all">

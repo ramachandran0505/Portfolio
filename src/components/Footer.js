@@ -8,10 +8,10 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 pt-16 pb-8 px-6 overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+    <footer className="relative bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 pt-12 pb-8 px-6 md:px-10 lg:px-12 overflow-hidden">
+      <div className="w-full max-w-[1440px] mx-auto">
         {/* Simplified Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           {/* Brand */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-black italic mb-4 transition-all duration-500 hover:tracking-widest cursor-default select-none">

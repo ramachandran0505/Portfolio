@@ -3,12 +3,12 @@ import { User, GraduationCap, Calendar, Award, Building2 } from 'lucide-react';
 import { userData } from '../data';
 
 const About = () => (
-  <section id="about" className="bg-white dark:bg-gray-950 py-16 px-6">
-    <div className="max-w-6xl mx-auto">
+  <section id="about" className="bg-white dark:bg-gray-950 py-12 px-6 md:px-10 lg:px-12">
+    <div className="w-full max-w-[1440px] mx-auto">
       {/* Top Part: Profile & Intro */}
-      <div className="flex flex-col lg:flex-row items-center gap-10 mb-14">
+      <div className="flex flex-col lg:flex-row items-center gap-8 mb-10">
         <div className="lg:w-1/3 group shrink-0">
-          <div className="relative aspect-square max-w-[300px] mx-auto overflow-hidden rounded-full border-4 border-white dark:border-gray-800 shadow-2xl transition-all duration-700">
+          <div className="relative aspect-square max-w-[240px] mx-auto overflow-hidden rounded-full border-4 border-white dark:border-gray-800 shadow-2xl transition-all duration-700">
             <img
               src={userData.profileImage}
               alt={userData.name}
@@ -18,23 +18,23 @@ const About = () => (
         </div>
 
         <div className="lg:w-2/3">
-          <div className="flex items-center space-x-2 mb-3">
-            <User className="text-primary-600" size={18} />
+          <div className="flex items-center space-x-2 mb-2">
+            <User className="text-primary-600" size={16} />
             <h3 className="text-[10px] font-black uppercase tracking-widest text-primary-600">About Me</h3>
           </div>
-          <h2 className="text-3xl lg:text-4xl font-black mb-4 leading-tight">
+          <h2 className="text-2xl lg:text-3xl font-black mb-3 leading-tight">
             Crafting Excellence through Innovation & Learning.
           </h2>
-          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6 font-medium whitespace-pre-line">
+          <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-5 font-medium whitespace-pre-line">
             {userData.aboutMe}
           </p>
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="p-4 bg-gray-50/50 dark:bg-gray-900/50 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+          <div className="grid grid-cols-2 gap-3">
+            <div className="p-3.5 bg-gray-50/50 dark:bg-gray-900/50 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
               <h4 className="font-bold text-sm mb-0.5">MCA Candidate</h4>
               <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">Professional Path</p>
             </div>
-            <div className="p-4 bg-gray-50/50 dark:bg-gray-900/50 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
+            <div className="p-3.5 bg-gray-50/50 dark:bg-gray-900/50 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
               <h4 className="font-bold text-sm mb-0.5">Full-Stack Goal</h4>
               <p className="text-[10px] text-gray-500 uppercase tracking-widest font-black">Technical Vision</p>
             </div>
@@ -43,22 +43,22 @@ const About = () => (
       </div>
 
       {/* Education Qualification Section */}
-      <div className="pt-8 border-t border-gray-100 dark:border-gray-800/80">
-        <div className="flex items-center justify-between mb-8">
+      <div className="pt-6 border-t border-gray-100 dark:border-gray-800/80">
+        <div className="flex items-center justify-between mb-6">
           <div>
-            <div className="flex items-center space-x-2 mb-2">
-              <GraduationCap className="text-primary-600" size={18} />
+            <div className="flex items-center space-x-2 mb-1.5">
+              <GraduationCap className="text-primary-600" size={16} />
               <h3 className="text-[10px] font-black uppercase tracking-widest text-primary-600">Academic Background</h3>
             </div>
-            <h2 className="text-2xl lg:text-3xl font-black tracking-tight">Education Qualification</h2>
+            <h2 className="text-2xl font-black tracking-tight">Education Qualification</h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {userData.education?.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white dark:bg-gray-900/60 p-6 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-primary-500/30 transition-all duration-300 group flex flex-col justify-between"
+              className="bg-white dark:bg-gray-900/60 p-5 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-primary-500/30 transition-all duration-300 group flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-start justify-between gap-3 mb-4">

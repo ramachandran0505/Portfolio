@@ -3,26 +3,26 @@ import { ChevronDown, ArrowRight } from 'lucide-react';
 import { userData } from '../data';
 
 const Hero = () => (
-  <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-12 bg-white dark:bg-gray-950">
+  <section className="relative min-h-[82vh] flex items-center justify-center overflow-hidden py-10 bg-white dark:bg-gray-950">
     {/* Refined Background Elements */}
     <div className="absolute top-20 left-1/4 w-48 h-48 bg-primary-400/5 rounded-full blur-3xl" />
     <div className="absolute bottom-20 right-1/4 w-72 h-72 bg-indigo-400/5 rounded-full blur-3xl" />
 
     <div className="px-6 text-center max-w-4xl mx-auto">
       {/* Scaled Down Headlines */}
-      <h1 className="text-4xl md:text-6xl font-black mb-4 tracking-tighter leading-[1.1] text-gray-900 dark:text-white">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-3 tracking-tighter leading-[1.1] text-gray-900 dark:text-white">
         Hi, I'm <span className="text-primary-600 dark:text-primary-500 relative">
           {userData.name}
           <span className="absolute bottom-1 left-0 w-full h-1 bg-primary-600/20 -z-10"></span>
         </span>
       </h1>
 
-      <h2 className="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-6 font-bold uppercase tracking-tight">
+      <h2 className="text-base md:text-lg text-gray-500 dark:text-gray-400 mb-4 font-bold uppercase tracking-tight">
         {userData.title} & MCA Professional
       </h2>
 
       {/* Compact Intro */}
-      <p className="text-sm md:text-base max-w-2xl mx-auto text-gray-500 dark:text-gray-400 mb-8 leading-relaxed font-medium">
+      <p className="text-sm md:text-base max-w-2xl mx-auto text-gray-500 dark:text-gray-400 mb-6 leading-relaxed font-medium">
         {userData.shortIntro}
       </p>
 

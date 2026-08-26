@@ -20,8 +20,8 @@ const Navbar = ({ toggleDarkMode, isDarkMode, onViewResume }) => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm py-2' : 'bg-transparent py-4'}`}>
-      <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md shadow-sm py-2.5' : 'bg-transparent py-4'}`}>
+      <div className="w-full max-w-[1440px] mx-auto px-6 md:px-10 lg:px-12 flex justify-between items-center">
         <a href="/" className="text-lg font-black uppercase tracking-widest text-primary-600">
           {userData.name}
         </a>
