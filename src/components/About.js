@@ -8,7 +8,7 @@ const About = () => (
       {/* Top Part: Profile & Intro */}
       <div className="flex flex-col lg:flex-row items-center gap-8 mb-10">
         <div className="lg:w-1/3 group shrink-0">
-          <div className="relative aspect-square max-w-[240px] mx-auto overflow-hidden rounded-full border-4 border-white dark:border-gray-800 shadow-2xl transition-all duration-700">
+          <div className="relative aspect-square max-w-[300px] mx-auto overflow-hidden rounded-full border-4 border-white dark:border-gray-800 shadow-2xl transition-all duration-700">
             <img
               src={userData.profileImage}
               alt={userData.name}
